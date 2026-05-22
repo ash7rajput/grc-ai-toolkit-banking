@@ -59,7 +59,7 @@ Active development. Started 2026-05-19. 14-day build.
 ## Roadmap
 
 - [x] Day 1: Repo scaffolding, NIST CSF 2.0 overview
-- [ ] Day 2: Framework data ingestion, Playbook outline
+- [x] Day 2: Framework data ingestion, Playbook outline
 - [ ] Days 3–5: Module 1 (mapping engine)
 - [ ] Days 6–7: Module 2 (risk register)
 - [ ] Days 8–9: Module 3 (TPRM)

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:nvlpubs.nist.gov)",
+      "Bash(Select-String -Path \"D:\\\\Profile\\\\Ashwin\\\\Documents\\\\Project1\\\\GitRepo\\\\grc-ai-toolkit-banking\\\\frameworks\\\\nist-csf-2\\\\csf-2-core.md\" -Pattern \"^\\\\| [A-Z]{2}\\\\.[A-Z]{2}-\\\\d{2}\")",
+      "Bash(Measure-Object)",
+      "Bash(Select-Object -ExpandProperty Count)",
+      "Bash(New-Item *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ]
+  }
+}
