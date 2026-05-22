@@ -84,3 +84,29 @@ of the AI, not the other way around.
 - Manual review, verification, edits: 1 hour
 - Playbook notes (this file): 30 minutes
 Total: 5 hours
+
+---
+
+## Day 2 - 2026-05-21
+
+### Where AI failed or hallucinated
+
+Block 3 surfaced three categories of AI error in framework descriptions:
+
+1. **Specific dates wrong** (PCI DSS v4.0.1 publication; v4.0 retirement). Pattern: AI guesses dates when uncertain rather than flagging uncertainty.
+
+2. **Imprecise regulatory vocabulary** ("mandatory" for SOC 2 Security). Pattern: AI doesn't distinguish regulatory mandate from voluntary scope selection. Senior practitioners do.
+
+3. **Structural errors on niche frameworks** (CRI Profile: wrong version, missed Extend function, made unsupported universal claims). Pattern: AI quality drops sharply on frameworks with smaller training-data footprint. CRI Profile is well-documented publicly but less prominent than NIST CSF or PCI DSS.
+
+**Mitigation:** For any framework less prominent than the top-tier standards (NIST CSF, ISO 27001, PCI DSS, SOC 2), assume AI output requires line-by-line source verification before commit. Build the verification step into the prompt itself by requiring source citations at the end of every factual claim.
+
+**Specific examples from Block 3:**
+
+- **Date precision:** PCI DSS v4.0.1 publication came back as March 2024; the correct date is June 11, 2024. CRI Profile version came back as 2.0; current version is 2.2. AI guesses confidently rather than flagging uncertainty.
+
+- **Regulatory vocabulary:** SOC 2 Security is not mandatory. SOC 2 is voluntary; Security is the only universally included Trust Services Category *when the engagement happens*. The word "mandatory" is technically wrong and a senior reviewer catches it instantly.
+
+- **Universal and negative claims:** AI wrote "every CSF 2.0 subcategory maps to CRI" and "the inverse does not occur" with no source. Asserting universals and asserting negatives are both red flags when reviewing AI output on any framework.
+
+**Senior practitioner takeaway:** AI quality drops sharply on frameworks with smaller training-data footprint. For banking GRC, the widely-documented standards (NIST CSF, PCI DSS, SOC 2, ISO 27001) get a light review. The banking-specific material (CRI Profile, FFIEC handbooks, OCC bulletins, SR letters, NYDFS 500, GLBA Safeguards) gets line-by-line verification against primary sources. This is exactly where ten years of practitioner experience earns its keep. AI does the typing. The practitioner does the judgment.
