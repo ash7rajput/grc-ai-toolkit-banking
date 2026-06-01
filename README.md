@@ -73,7 +73,7 @@ Active development. Started 2026-05-19. 14-day build.
 ## Author
 
 Ashwin — 10 years in GRC.
-[LinkedIn](https://www.linkedin.com/in/placeholder](https://linkedin.com/in/ashwin-rajput) *(link to be updated)*
+[LinkedIn](https://www.linkedin.com/in/placeholder](https://linkedin.com/in/ashwin-rajput)
 
 ---
 
