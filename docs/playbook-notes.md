@@ -110,3 +110,30 @@ Block 3 surfaced three categories of AI error in framework descriptions:
 - **Universal and negative claims:** AI wrote "every CSF 2.0 subcategory maps to CRI" and "the inverse does not occur" with no source. Asserting universals and asserting negatives are both red flags when reviewing AI output on any framework.
 
 **Senior practitioner takeaway:** AI quality drops sharply on frameworks with smaller training-data footprint. For banking GRC, the widely-documented standards (NIST CSF, PCI DSS, SOC 2, ISO 27001) get a light review. The banking-specific material (CRI Profile, FFIEC handbooks, OCC bulletins, SR letters, NYDFS 500, GLBA Safeguards) gets line-by-line verification against primary sources. This is exactly where ten years of practitioner experience earns its keep. AI does the typing. The practitioner does the judgment.
+
+---
+
+## Day 3 – 2026-06-04
+
+Built Module 1's first function: mapped all 31 NIST CSF 2.0 GOVERN subcategories to PCI DSS v4.0.1, SOC 2 TSC, and CRI Profile v2.2. Three crosswalk files manually reviewed and validated. Set up the validation log workflow and the module README.
+
+### Where AI helped
+First-pass crosswalk tables came out fast and mostly structured correctly. The CSF-to-SOC 2 mappings to the Common Criteria were the strongest. AI is good at the obvious analogs (GV.RR-01 → CC1.1/CC1.2, GV.PO-01 → CC5.3, GV.SC-05/06 → CC9.2). AI also correctly identified that SOC 2 maps GOVERN substantially better than PCI DSS (1 "no direct mapping" vs. 17 for PCI DSS).
+
+### Where AI tripped
+•    Over-mapped governance subcategories to PCI DSS Req 12 by default, even where the link was weak (e.g., GV.RR-04 to 12.6.3/12.7.1 was MEDIUM, not HIGH—PCI DSS doesn't address separation or performance management).
+•    PCI DSS GV.SC-07 confidence initially missed the frequency gap—AI said "continuous monitoring" when PCI DSS 12.8.4 only requires annual monitoring. Corrected to MEDIUM with explicit frequency gap note.
+
+### Senior practitioner takeaway
+The AI produces a plausible first draft, but confidence ratings are the weak point. It labels mappings HIGH that are really MEDIUM (e.g., PCI DSS GV.RR-01/02, SOC 2 GV.SC-07). Mapping is not compliance, and AI does not naturally make that distinction. That judgment is the practitioner's job and it is the part of this module that actually demonstrates experience. 
+
+### Process note
+Lost some time today reconciling the file structure and README. Lesson: lock the folder and file-naming structure before generating content, not after. Day 4 and 5 repeat the GOVERN pattern exactly (IDENTIFY, PROTECT), so no structure decisions remain. Scope notes and validation notes templates are now reusable across all three frameworks.
+
+### Time breakdown
+•    AI generation: ~1.5 hours (run prompts for all three frameworks)
+•    Manual QA: ~4 hours (reviewed all 93 subcategory mappings across 3 files)
+•    Corrections: ~2 hours (rephrased rationale, adjusted confidence qualifiers, added verification flags)
+•    README fixes: ~1 hour (folder structure, validation log workflow)
+•    Notes/documentation: ~1 hour (validation logs, scope notes, this summary)
+•    Total: ~9.5 hours
