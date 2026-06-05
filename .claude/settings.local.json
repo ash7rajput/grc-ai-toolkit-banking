@@ -8,7 +8,9 @@
       "Bash(New-Item *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(Get-ChildItem -Recurse \"D:\\\\Profile\\\\Ashwin\\\\Documents\\\\Project1\\\\GitRepo\\\\grc-ai-toolkit-banking\\\\modules\\\\01-mapping-engine\")",
+      "Bash(Select-Object FullName)"
     ]
   }
 }
